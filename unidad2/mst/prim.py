@@ -1,22 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[17]:
-
-
 import heapq as hq
 import math
 INF = float("inf")
-
-
-# In[18]:
-
-
 print(math.inf, INF)
-
-
-# In[26]:
-
 
 def prim(G):
     n = len(G)
@@ -40,11 +25,8 @@ def prim(G):
     return Path, Cost
 
 
-# In[27]:
-
-
 G = []
-with open('grafito.in') as f:
+with open("unidad2/mst/grafito.in") as f:
     for line in f:
         u = len(G)
         G.append([])
@@ -52,21 +34,9 @@ with open('grafito.in') as f:
         for i in range(len(nums) // 2):
             G[u].append((nums[i * 2], nums[i * 2 + 1]))
 
-
-# In[28]:
-
-
 print(prim(G))
 
-
-# In[29]:
-
-
 q = []
-
-
-# In[3]:
-
 
 hq.heappush(q, 5)
 hq.heappush(q, 9)
@@ -79,20 +49,11 @@ hq.heappush(q, 6)
 hq.heappush(q, 7)
 
 
-# In[4]:
-
-
 while len(q) > 0:
     print(hq.heappop(q))
 
 
-# In[9]:
-
-
 q = []
-
-
-# In[10]:
 
 
 hq.heappush(q, (5, "Sebastian"))
@@ -105,17 +66,8 @@ hq.heappush(q, (4, "otra cosa"))
 hq.heappush(q, (6, 1999))
 hq.heappush(q, (7, {"nombre": "Perez"}))
 
-
-# In[11]:
-
-
 while len(q) > 0:
     priority, elem = hq.heappop(q)
     print(priority, elem)
-
-
-# In[ ]:
-
-
 
 
